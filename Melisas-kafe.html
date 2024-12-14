@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melisas Kafe</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background: #f8f8f8;
+        }
+        .header h1 {
+            font-size: 3rem;
+            color: #333;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background: #333;
+            padding: 10px 0;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .section {
+            display: none;
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #f9f9f9;
+        }
+        .section.active {
+            display: block;
+        }
+        .section h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        .section p {
+            margin: 10px 0;
+        }
+    </style>
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <h1>Melisas Kafe</h1>
+    </header>
+    <nav class="navbar">
+        <a href="javascript:void(0);" onclick="showSection('sākums')">Sākums</a>
+        <a href="javascript:void(0);" onclick="showSection('pakalpojumi')">Pakalpojumi</a>
+        <a href="javascript:void(0);" onclick="showSection('par-mums')">Par mums</a>
+        <a href="javascript:void(0);" onclick="showSection('uztura-informacija')">Uztura informācija</a>
+        <a href="javascript:void(0);" onclick="showSection('klientu-atsauksmes')">Klientu atsauksmes</a>
+        <a href="javascript:void(0);" onclick="showSection('bieži-uzdotie-jautājumi')">Biežāk uzdotie jautājumi</a>
+        <a href="javascript:void(0);" onclick="showSection('kontakti')">Kontakti</a>
+        <a href="javascript:void(0);" onclick="showSection('blogs')">Blog/Sabiedriskās ziņas</a>
+    </nav>
+    <div class="container">
+        <section id="sākums" class="section active">
+            <h3>Sākums</h3>
+            <p>Laipni lūdzam Melisas Kafe mājaslapā! Mēs piedāvājam kvalitatīvus un sabalansētus ēdināšanas pakalpojumus izglītības iestādēm un personālam.</p>
+            <p>Uzziniet vairāk par mūsu misiju un to, kā mēs veicinām veselīgu uzturu.</p>
+        </section>
+
+        <section id="pakalpojumi" class="section">
+            <h3>Pakalpojumi</h3>
+            <p>Mēs piedāvājam dažādus ēdināšanas pakalpojumus, tostarp veselīgus un sabalansētus ēdienus skolēniem un darbiniekiem.</p>
+            <p>Piedāvājumā ietilpst pielāgotas ēdienkartes un ikdienas maltītes.</p>
+        </section>
+
+        <section id="par-mums" class="section">
+            <h3>Par mums</h3>
+            <p>Melisas Kafe ir uzņēmums, kas specializējas ēdināšanas pakalpojumu sniegšanā izglītības iestādēm. Mūsu mērķis ir nodrošināt kvalitatīvu uzturu visiem klientiem.</p>
+            <p>Mūsu vērtības: veselība, kvalitāte un uzticamība.</p>
+        </section>
+        <section id="uztura-informacija" class="section">
+            <h3>Uztura informācija</h3>
+            <p>Detalizēta informācija par ēdienkartes uzturvērtībām, iekļaujot kalorijas, vitamīnus un citas būtiskas sastāvdaļas.</p>
+        </section>
+
+        <section id="klientu-atsauksmes" class="section">
+            <h3>Klientu atsauksmes</h3>
+            <p>"Mūsu skolēniem patīk Melisas Kafe ēdieni! Vienmēr svaigi un garšīgi." - Klients A</p>
+            <p>"Lieliska ēdienkarte un profesionāla pieeja." - Klients B</p>
+        </section>
+
+        <section id="bieži-uzdotie-jautājumi" class="section">
+            <h3>Biežāk uzdotie jautājumi</h3>
+            <p><strong>Vai piedāvājat vegānās opcijas?</strong> Jā, mēs nodrošinām arī vegānus ēdienus.</p>
+            <p><strong>Vai ēdienkarte tiek regulāri mainīta?</strong> Jā, tā tiek atjaunināta atbilstoši sezonai un klientu vēlmēm.</p>
+        </section>
+
+        <section id="kontakti" class="section">
+            <h3>Kontakti</h3>
+            <p>Sazinieties ar mums: info@melisas-kafe.lv | +371 12345678</p>
+            <p>Adrese: Brīvības iela 1, Rīga, Latvija</p>
+        </section>
+
+        <section id="blogs" class="section">
+            <h3>Blog/Sabiedriskās ziņas</h3>
+            <p>Izlasiet jaunākos rakstus par uztura padomiem un mūsu aktuālajām aktivitātēm.</p>
+        </section>
+    </div>
+</body>
+</html>
